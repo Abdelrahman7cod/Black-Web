@@ -1,0 +1,281 @@
+<style>
+  @charset "UTF-8";
+  @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Merriweather, serif;
+  }
+  
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  label,
+  main {
+    color: var(--text, black);
+  }
+  
+  .theme-switch__input:checked ~ main,
+  .theme-switch__input:checked ~ label {
+    --text: white;
+  }
+  
+  main {
+    --gradDark: hsl(144, 100%, 89%);
+    --gradLight: hsl(42, 94%, 76%);
+    background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+    padding: 120px 40px 40px 40px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .theme-switch__input:checked ~ main {
+    --gradDark: hsl(198, 44%, 11%);
+    --gradLight: hsl(198, 39%, 29%);
+  }
+  
+  .theme-switch__input:checked ~ .theme-switch__label {
+    background-color: lightSlateGray;
+  }
+  
+  .theme-switch__input,
+  .theme-switch__label {
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .theme-switch__input {
+    opacity: 0;
+  }
+  .theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+    background-color: lightSlateGray;
+  }
+  .theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+    background-color: #d4ebf2;
+  }
+  
+  .theme-switch__label {
+    padding: 20px;
+    margin: 60px;
+    transition: background-color 200ms ease-in-out;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: slateGray;
+    box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+  }
+  .theme-switch__label span {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+  }
+  .theme-switch__label::before, .theme-switch__label::after {
+    font-size: 2rem;
+    position: absolute;
+    transform: translate3d(0, -50%, 0);
+    top: 50%;
+  }
+  .theme-switch__label::before {
+    content: "☼";
+    right: 100%;
+    margin-right: 10px;
+    color: orange;
+  }
+  .theme-switch__label::after {
+    content: "☾";
+    left: 100%;
+    margin-left: 10px;
+    color: lightSlateGray;
+  }
+  
+  .theme-switch__label span::after {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    content: "";
+    border-radius: 50%;
+    background-color: lightBlue;
+    transition: transform 200ms, background-color 200ms;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .theme-switch__input:checked ~ .theme-switch__label span::after {
+    transform: translate3d(70px, 0, 0);
+  }
+  
+  
+  .theme-switch__input:checked ~ .theme-switch__label::before {
+    color: lightSlateGray;
+  }
+  .theme-switch__input:checked ~ .theme-switch__label::after {
+    color: turquoise;
+  }
+  </style>
+  
+  <div class="page">
+      <!--Theme switch-->
+      <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+      <label for="themeSwitch" class="theme-switch__label">
+        <span></span>
+      </label>
+      
+      <!--Main page content-->
+   
+  
+  
+  
+  
+     
+      
+         <style>
+         
+         img {
+          border-style: solid;
+                  text-align: center;
+                  background: rgb(114, 59, 157);
+                  border-radius: 20px;
+             }
+         
+      </style>
+  
+  
+  <style>
+  
+      p {
+          Text-align:left;
+      }
+  
+      pre {
+          Text-align:left;
+      }
+  
+      pre {
+            border-style: solid;
+            border-width: 8x;
+            box-sizing: border-box;
+            
+        }
+  
+  
+  </style>
+      
+       
+  
+  
+      <main>
+        <div class="wrapper">
+        <h1><Center></Center></h1>
+        <body>
+          <P></P>
+         
+  
+          <br><br>
+  
+          <p left></p>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        </body>
+        <p></p>
+        </div>
+      </main>
+    </div>
+  
+  <h3></h3>
+  
+  
+  
+  
+
+  
+<body>
+    <h2<h2>What is OOP?</h2> 
+
+    <br>
+Stands for Object-Oriented Programming
+
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+</br>
+
+<br>
+****مميزات (OOP)****
+
+هتخلي الكود شكلوا منظم وتسهل ان اي حد يفهموا وسهل تعدل عليه
+
+> Martin Fowler
+> 
+
+> Any fool can write code that a computer can understand. Good programmers write code than humans can understand.
+> 
+
+يعني الشاطر اللى يكتب كود يفهمه اي حد مش اللى يفهموا الكمبيوتر
+
+</br>
+<br></br>
+**Reusability** 
+
+**هتخلي زي ما بتعمل كوبي وبيست للكود، هتستفيد من كود جاهز بدل ما تعمله من جديد و اشرح وسهل**
+
+
+<br></br>
+
+**Maintainability**
+
+هتسهل تغيير أي حاجه في الكود من غير ما تؤثر على باقي الاكواد
+
+  وخلي بالك من تكرار الكود هنااا لازم تقللوا والاحسن بلاش تكرار   (**DRY) - Don't Repeat Yourself**
+
+البرمجة الشيئية زي **طريقة تفكير مختلفة** لتطوير البرامج. بدل ما تفكر في خطوات تنفيذ البرنامج خطوة بخطوة، تفكر في
+
+**أشياء** (objects) لها خصائص (properties) وسلوك (methods).
+
+تخيل إنك بتشتغل في شركة كبيرة. عشان تسهل شغلك و تخليه أكثر تنظيم، بتقسيم العمل على أقسام مختلفة. كل قسم بيكون مسؤول عن حاجة معينة، زي قسم المبيعات، قسم التسويق، و قسم خدمة العملاء. كل قسم بيعمل بشكل مستقل، لكنه في نفس الوقت بيتعاون مع الأقسام التانية عشان الشركة تشتغل كويس
+
+  **(OOP)** كده نفس الكلام بيحصل في **البرمجة الموجهة بالكائنات** 
+
+  **(Objects)** بدل ما تكتب كود طويل ومعقد عشان تعمل حاجة معينة، بتقسمه على **كائنات**
+
+أصغر وأسهل في الفهم والتحكم
+
+…هوضح اكتر ف المثال الجاي ده
+
+تخيل أنك بتعمل برنامج لحجز طيارة. بدل ما تكتب أكواد لكل حاجة لوحدها، تقدر تستخدم مكونات زى:
+
+- **مكون راكب (Passenger):** بيخزن بيانات الراكب زى الاسم ورقم البطاقة.
+- **مكون حجز (Booking):** بيخزن بيانات الحجز زى تاريخ السفر وعدد التذاكر.
+- **مكون طيارة (Airplane):** بيخزن بيانات الطيارة زى نوع الطيارة وعدد المقاعد المتاحة.
+
+الخلاصه ف الموضوع ان
+
+ **بيخلي الكود أسهل في الفهم والتحكم، ويساعدك على تكتب برامج أكبر وأكثر تعقيدًا بشكل أفضل OOP**  
+
+تخيل نفسك بتتفاعل مع حاجات حقيقيه وتفكر في خصائصها وسلوكياتها، عشان تفهم البرمجة الشيئية بشكل أفضل.
+</body>
