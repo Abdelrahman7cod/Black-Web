@@ -1,8 +1,420 @@
+<!!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Merriweather, serif;
+    }
+
+    .wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    label,
+    main {
+      color: var(--text, black);
+    }
+
+    .theme-switch__input:checked~main,
+    .theme-switch__input:checked~label {
+      --text: white;
+    }
+
+    main {
+      --gradDark: hsl(0, 0%, 46%);
+      --gradLight: hsl(0, 0%, 100%);
+      background: linear-gradient(to bottom,
+          var(--gradDark),
+          var(--gradLight));
+      padding: 120px 40px 40px 40px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .theme-switch__input:checked~main {
+      --gradDark: hsl(198, 44%, 11%);
+      --gradLight: hsl(198, 39%, 29%);
+    }
+
+    .theme-switch__input:checked~.theme-switch__label {
+      background-color: lightSlateGray;
+    }
+
+    .theme-switch__input,
+    .theme-switch__label {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .theme-switch__input {
+      opacity: 0;
+    }
+
+    .theme-switch__input:hover+.theme-switch__label,
+    .theme-switch__input:focus+.theme-switch__label {
+      background-color: lightSlateGray;
+    }
+
+    .theme-switch__input:hover+.theme-switch__label span::after,
+    .theme-switch__input:focus+.theme-switch__label span::after {
+      background-color: #d4ebf2;
+    }
+
+    .theme-switch__label {
+      padding: 20px;
+      margin: 60px;
+      transition: background-color 200ms ease-in-out;
+      width: 120px;
+      height: 50px;
+      border-radius: 50px;
+      text-align: center;
+      background-color: slateGray;
+      box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+    }
+
+    .theme-switch__label span {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 0;
+      width: 100%;
+    }
+
+    .theme-switch__label::before,
+    .theme-switch__label::after {
+      font-size: 2rem;
+      position: absolute;
+      transform: translate3d(0, -50%, 0);
+      top: 50%;
+    }
+
+    .theme-switch__label::before {
+      content: "☼";
+      right: 100%;
+      margin-right: 10px;
+      color: orange;
+    }
+
+    .theme-switch__label::after {
+      content: "☾";
+      left: 100%;
+      margin-left: 10px;
+      color: lightSlateGray;
+    }
+
+    .theme-switch__label span::after {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 5px;
+      width: 40px;
+      height: 40px;
+      content: "";
+      border-radius: 50%;
+      background-color: lightBlue;
+      transition: transform 200ms, background-color 200ms;
+      box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .theme-switch__input:checked~.theme-switch__label span::after {
+      transform: translate3d(70px, 0, 0);
+    }
+
+    .theme-switch__input:checked~.theme-switch__label::before {
+      color: lightSlateGray;
+    }
+
+    .theme-switch__input:checked~.theme-switch__label::after {
+      color: turquoise;
+    }
+
+    img {
+      border-style: solid;
+      text-align: center;
+      background: rgb(114, 59, 157);
+      border-radius: 20px;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+
+  <style>
+    .social {
+      padding: 15px;
+      margin: 5px;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 1000px;
+    }
+
+    /* Social Media Links*/
+    .social a {
+      font-size: 30px;
+      color: #426f6c;
+      border-style: groove;
+      border-color: rgb(91, 0, 0);
+      padding: 10px;
+      margin: 10px;
+      border-radius: 6px;
+      display: inline-block
+    }
+
+
+    /* Social Media Links on mouse hover */
+    .social a:hover {
+      background-color: darkred;
+      color: white;
+      -webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+      -moz-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+      -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+      transition: background-color 0.6s ease-out, color 0.6s ease-out;
+    }
+  </style>
+
+  </style>
+
+  <style>
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 24px;
+    }
+
+    p {
+      font-weight: 700;
+      text-align: center;
+      font-size: 40px;
+      font-family: Hack, sans-serif;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #000, #fff, #000);
+      letter-spacing: 5px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      animation: shine 5s linear infinite;
+      position: relative;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        margin-top: 70px;
+
+      }
+
+    @keyframes shine {
+      0% {
+        background-position-x: -500%;
+      }
+
+      100% {
+        background-position-x: 500%;
+      }
+    }
+  </style>
+
+  <style>
+ 
+
+
+
+
+.image-container {
+  overflow: hidden; /* Clear floats after child elements */
+  margin-top: 20%;
+ 
+}
+
+.image-container img {
+  float: left;
+ 
+   /* Adjust width as needed */
+ 
+
+}
+
+
+img{
+  margin-right: 40px;
+}
+
+body{
+  background-color: #6a6a6a;
+}
+
+
+.menu__bar{
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5%;
+background-color: #6a6a6a;
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
+  display: inline;
+  
+}
+.logo span {
+  color: var(--color-primary);
+  text-align: center;
+}
+.menu-bar ul {
+  list-style: none;
+
+ 
+}
+.menu__bar ul li {
+  padding: 10px 30px;
+  display: flex;
+  display: inline;
+  background-color: #fff;
+}
+
+.menu__bar ul li a{
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s;
+  background-color: #fff;
+  
+  
+}
+.hero{
+  height: calc(100vh - 80%px);
+}
+
+  </style>
+</head>
+
+<body>
+  <nav class="menu__bar">
+    <h1 class="logo">Black<span>box</span></h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+<section class="hero">
+  &nbsp;
+</section>
+  <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+  <label for="themeSwitch" class="theme-switch__label">
+    <span></span>
+  </label>
+  <main>
+
+    <p>Black Box the best platform for programming <br><a href="">all resources programming languages in one place, in
+        my style and explanation</a></p>
+    <div class="wrapper">
+      <h1 style="font-family: 'Courier New', Courier, monospace;">Programming languages</h1>
+          <a target="_blank" href="c.html" title="C#">
+            <img src="icons8-c-sharp-logo-256.png" alt="C#" /></a>
+            <h1>Explore tutorials and videos</h1>
+            <div class="image-container">
+              <a target="_blank" href="https://youtu.be/SvBhSA83UAI" title="c# in VS Code">
+                <img style="width: 30%;" src="maxresdefault.webp" alt="c# in VS Code" />
+                <p></p>
+                <a target="_blank" href="https://youtu.be/ON0PZ2dHfbs" title="tool VS Code">
+                  <img style="width: 30%;" src="maxresdefault2.webp" alt="Best tool for programmers" /></a>
+                  <p></p>
+                </a>
+            </div>
+               
+    </div>
+    <div class="row social" align="center">
+      <a target="blank" href='https://www.youtube.com/channel/UCUQOiAytGeD8WELsY58fk5w'><i
+          class="fab fa-youtube"></i></a>
+      <a target="blank" href='https://t.me/black0box1'><i class="fab fa-telegram"></i></a>
+      <a target="blank" href='https://www.facebook.com/black0box1'><i class='fab fa-facebook'></i></a>
+      <a target="blank" href='https://www.linkedin.com/in/abdelrahman-undefined-8a9646274'><i
+          class='fab fa-linkedin'></i></a>
+      <a target="blank" href='https://www.instagram.com/blackbox_ae?utm_source=qr&igsh=MW5oMHU4bGVrZXA5Mw=='><i
+          class='fab fa-instagram'></i></a>
+      <a target="blank" href="abdelrahmanr7"> <i class="fab fa-discord"></i></a>
+      <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">© 2024 black box</h4>
+    </div>
+  </main>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--Theme switch-->
 
 <!--Main page content-->
 
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
