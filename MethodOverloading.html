@@ -200,9 +200,74 @@
         }
         </style>
         
-    
+        <style>
+          .sidebar {
+        position: fixed;  /* Fix the sidebar to the viewport */
+        width: 150px;
+        background-color: #f1f1f1;
+        padding: 10px;
+      }
+      
+      .sidebar ul {
+        list-style: none; /* Remove default bullets */
+        padding: 0;
+      }
+      
+      .sidebar li {
+        margin: 10px 0; /* Margin between list items */
+      }
+      
+      .sidebar a {
+        display: block;  /* Make links occupy full width */
+        color: black;
+        text-decoration: none; /* Remove underline */
+        padding: 8px;
+      }
+      
+      .sidebar a:hover {
+        background-color: #ddd; /* Hover effect */
+      }
+        </style>
+        <style>
+          .sidebar {
+            height: 300px; /* Set a height for the sidebar */
+            overflow-y: scroll; /* Enable scrolling for sidebar content */
+          }
+          
+          .fixed-content {
+            overflow: hidden; /* Disable scrolling for this element */
+            height: 100px; /* Set a height for the fixed content */
+          }
+        </style>
     
         <main>
+          
+        <div class="sidebar">
+          <ul> 
+            <li><a href="OOP.Html">OOP</a></li>
+            <li><a href="Objects.Html">Class & Object</a></li>
+            <li><a href="Constructor.html">Constructor</a></li>
+            <li><a href="MethodOverloading.html">Method Overloading</a></li>
+            <li><a href="Inheritance.html">Inheritance </a></li>
+            <li><a href="Abstract.html">Abstract</a></li>
+            <li><a href="Property.html">Property</a></li>
+            <li><a href="Polymorphism.html">Polymorphism</a></li>
+            <li><a href="Encapsulation.html">Encapsulation</a></li>
+            <li><a href="OperatorOverloading.html">Operator Overloading</a></li>
+            <li><a href="struct.html">struct</a></li>
+            <li><a href="Indexers.html">Indexers</a></li>
+            <li><a href="ParamArrays.html">Param Arrays</a></li>
+            <li><a href="Jaggedarray.html">Jagged array</a></li>
+          </ul>
+          <div class="fixed-content"> 
+          </div>
+        </div> 
+      <script>
+        const scrollableContent = document.getElementById('scrollable-content');
+        scrollableContent.addEventListener('scroll', () => {
+          document.getElementById('fixed-content').scrollTop = 0; // Reset scroll position to top on scroll
+        });
+      </script>
           <div class="wrapper">
           <h1><Center></Center></h1>
           <body>
