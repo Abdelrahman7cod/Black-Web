@@ -59,15 +59,12 @@
     }
     
     .theme-switch__label {
-      padding: 20px;
-      margin: 60px;
-      transition: background-color 200ms ease-in-out;
-      width: 120px;
-      height: 50px;
+    
+      
+     
       border-radius: 50px;
-      text-align: center;
-      background-color: slateGray;
-      box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+      text-align: left;
+   
     }
     .theme-switch__label span {
       position: absolute;
@@ -76,10 +73,8 @@
       width: 100%;
     }
     .theme-switch__label::before, .theme-switch__label::after {
-      font-size: 2rem;
-      position: absolute;
-      transform: translate3d(0, -50%, 0);
-      top: 50%;
+      font-size: 1rem;
+      
     }
     .theme-switch__label::before {
       content: "☼";
@@ -106,6 +101,8 @@
       transition: transform 200ms, background-color 200ms;
       box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
     }
+
+
     
     .theme-switch__input:checked ~ .theme-switch__label span::after {
       transform: translate3d(70px, 0, 0);
@@ -120,14 +117,7 @@
     }
     </style>
     
-    <div class="page">
-        <!--Theme switch-->
-        <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
-        <label for="themeSwitch" class="theme-switch__label">
-          <span></span>
-        </label>
-        
-        <!--Main page content-->
+  
      
 
         
@@ -285,8 +275,74 @@ animation: animate 8s linear infinite;
 }
 
 </style>
+<style>
+  .menu__bar{
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5%;
+background-color: #6a6a6a;
+}
 
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
+  display: inline;
+  
+}
+.logo span {
+  color: var(--color-primary);
+  text-align: center;
+}
+.menu-bar ul {
+  list-style: none;
+
+ 
+}
+.menu__bar ul li {
+  padding: 10px 30px;
+  display: flex;
+  display: inline;
+  background-color: #fff;
+}
+
+.menu__bar ul li a{
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s;
+  background-color: #fff;
+  
+  
+}
+</style>
+<nav class="menu__bar">
+  <h1 class="logo">Black<span>box</span></h1>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">Pages</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+ 
+  <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+  <label for="themeSwitch" class="theme-switch__label">
+    
+  </label>
+ 
+ 
 <main>
+  
+
+   
     <div class="wrapper">
     <h1><Center>C#</Center></h1>
     <h3></h3>
