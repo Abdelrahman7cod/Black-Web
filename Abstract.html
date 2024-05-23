@@ -321,10 +321,10 @@
         });
       </script>
           <div class="wrapper">
-          <h1><Center></Center></h1>
+          <h1><Center>Abstract</Center></h1>
           <body>
             <P>Define:</P>
-           
+            <p left>we cannot create objects of an abstract class. We use the abstract keyword to create an abstract class</p>
     
             <br><br>
     
@@ -335,6 +335,53 @@
       <code>
 
     
+        // create an abstract class
+        abstract class Language {
+          // fields and methods
+        }
+        ...
+        
+        // try to create an object Language
+        // throws an error
+        Language obj = new Language();
+    
+    
+      </code>
+    </pre>
+    
+    <p left>here in the above code the object has been created and that’s wrong as i told you we can’t create it</p>
+    
+    
+    
+    <pre>
+      <code>
+
+        using System;
+        namespace AbstractClass {
+        
+          abstract class Language {
+        
+            // non-abstract method
+            public void display() {
+              Console.WriteLine("Non abstract method");
+            }
+          }
+        
+          // inheriting from abstract class
+          class Program : Language {
+        
+        static void Main (string [] args) {
+        
+              // object of Program class
+              Program obj = new Program();
+        
+              // access method of an abstract class
+              obj.display();
+        
+              Console.ReadLine();
+            }
+          }
+        }
     
     
     
@@ -342,13 +389,7 @@
     </pre>
     
     
-    
-    
-    
-    
-    
-    
-    
+    <p left>Maybe some people don't think so and come and say that you made a object, but let me tell you that the object you are making was created from another class, not the Abstract class, and the other class inherited from the Abstract class, so I can make a object in this case.</p>
     
     
     
