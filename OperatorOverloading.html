@@ -324,21 +324,67 @@
           });
         </script>
           <div class="wrapper">
-          <h1><Center></Center></h1>
+          <h1><Center>Operator Overloading</Center></h1>
           <body>
             <P>Define:</P>
-           
+            A user-defined type can overload a predefined C# operator. That is, a type can provide the custom implementation of an operation in case one or both of the operands are of that type
     
             <br><br>
-    
-            <p left>Lets the an Example:</p>
+    <p>
+      I have two Objects and I want to do any operation between them and at the same time the object is a set of data whether vareiable , method or any thing else taken from the class so here I use the operator overloading
+
+    </p>
+    Note that this operator Can be overload
+    +, - , * , / , % , == , != , < , > , <= , >= , & ,|
+
+
+
+    <br><br>
+
+            <p left>Lets see an Example:</p>
     
             <p></p>
     <pre>
       <code>
 
     
-    
+        class Calculator
+        {
+            public int x;
+            public int y;
+        
+            public Calculator(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
+            }
+            public Calculator() { }
+        
+            public static Calculator operator +(Calculator c1, Calculator c2)
+            {
+                Calculator calc = new Calculator();
+                calc.x = c1.x + c2.x;
+                calc.y = c1.y + c2.y;
+                return calc;
+        
+            }
+        
+            public void print()
+            {
+                Console.WriteLine($"{x} {y}");
+            }
+        
+        
+            internal class Program
+            {
+                static void Main(string[] args)
+                {
+                    Calculator c1 = new Calculator(4,9);
+                    Calculator c2 = new Calculator(5,10);
+                    Calculator c3 = c1 + c2;
+                    c3.print();
+                }
+       }   }
     
     
       </code>
